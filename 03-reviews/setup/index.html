@@ -7,14 +7,49 @@
     <!-- font-awesome -->
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     />
 
     <!-- styles -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="myStyles.css" />
   </head>
   <body>
-    <h1>review project</h1>
+    <section>
+      <div class="main">
+        <h1>our reviews</h1>
+        <div class="underline"></div>
+        <div class="card">
+          <div class="img-container">
+            <div class="img-background"></div>
+            <div id="profile-pic" class="profile-pic"></div>
+            <div class="icon-holder">
+              <i class="fa-solid fa-quote-left"></i>
+            </div>
+          </div>
+          <h4 id="name" class="name">name</h4>
+          <h5 id="job" class="job">web developer</h5>
+          <p id="text" class="comment">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste
+            mollitia numquam repellendus dolore assumenda vel praesentium?
+            Facilis laudantium itaque illum provident commodi assumenda fuga
+            labore sint? Iusto adipisci odit voluptatem.
+          </p>
+          <div class="btn-holder">
+            <button class="btn previous">
+              <i id="previous" class="icn-btn fa-solid fa-angles-left"></i>
+            </button>
+            <button class="btn next">
+              <i id="next" class="icn-btn fa-solid fa-angles-right"></i>
+            </button>
+          </div>
+          <button id="surprise-me" class="surprise-me">surprise me</button>
+        </div>
+      </div>
+    </section>
     <!-- javascript -->
     <script src="app.js"></script>
   </body>
