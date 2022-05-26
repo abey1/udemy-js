@@ -13,15 +13,25 @@ body {
   position: relative;
   display: flex;
   overflow: hidden;
-  height: 200px;
+  height: 50px;
   justify-content: center;
   align-items: center;
   background: white;
+  box-shadow: 1px 1px 0.9rem black;
 }
 .nav-center {
   display: flex;
   justify-content: center;
   width: 90%;
+}
+
+.logo {
+  text-transform: capitalize;
+  text-shadow: 0px 4px 0.2rem black;
+}
+
+.logo span {
+  color: rgb(5, 199, 56);
 }
 
 .top-links {
@@ -59,22 +69,121 @@ body {
 .bottom-nav {
   position: absolute;
   top: 50px;
-  left: 30px;
+  left: 0px;
 }
 
 .menu {
   display: flex;
   align-items: center;
   font-size: 1.5rem;
+  color: rgb(5, 199, 56);
+}
+
+.menu:hover {
+  animation: halfRotate 0.5s linear both;
+}
+
+.menu:not(:hover) {
+  animation: halfBackRotate 0.5s linear;
+}
+
+@keyframes halfRotate {
+  0% {
+    transform: rotate(0deg);
+    color: rgb(5, 199, 56);
+  }
+  100% {
+    transform: rotate(90deg);
+    color: black;
+  }
+}
+
+@keyframes halfBackRotate {
+  0% {
+    transform: rotate(90deg);
+    color: black;
+  }
+  100% {
+    transform: rotate(0deg);
+    color: rgb(5, 199, 56);
+  }
 }
 
 .lower-link {
-  padding-left: 10px;
-  list-style: none;
+  width: 100vw;
+  height: 38px;
+  padding-left: 30px;
+  color: white;
+  /* background: red; */
 }
 
-li {
-  margin-bottom: 10px;
+.lower-link:hover {
+  animation: backgroundColorChange 0.5s linear both;
+}
+
+.lower-link:not(:hover) {
+  animation: notBackgroundColorChange 0.5s linear both;
+}
+
+@keyframes backgroundColorChange {
+  0% {
+    background: white;
+  }
+  100% {
+    background: rgb(5, 199, 56);
+  }
+}
+
+@keyframes notBackgroundColorChange {
+  0% {
+    background: rgb(5, 199, 56);
+  }
+  100% {
+    background: white;
+  }
+}
+
+.link {
+  font-size: 1.5rem;
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: rgb(33, 33, 33);
+  background: white;
+}
+
+.link:hover {
+  animation: linkBackgroundColorChange 0.5s linear both;
+}
+
+.link:not(:hover) {
+  animation: notLinkBackgroundColorChange 0.5s linear both;
+}
+
+@keyframes notLinkBackgroundColorChange {
+  0% {
+    color: white;
+    background: rgb(5, 199, 56);
+    margin-left: 10px;
+  }
+  100% {
+    color: rgb(33, 33, 33);
+    background: white;
+    margin-left: 0;
+  }
+}
+
+@keyframes linkBackgroundColorChange {
+  0% {
+    color: rgb(33, 33, 33);
+    background: white;
+    margin-left: 0;
+  }
+  100% {
+    color: white;
+    background: rgb(5, 199, 56);
+    margin-left: 10px;
+  }
 }
 
 a {
@@ -84,7 +193,7 @@ a {
 }
 
 @media screen and (min-width: 800px) {
-  .nav {
+  #nav {
     height: 50px;
   }
   .menu {
