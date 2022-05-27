@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(241, 245, 248);
+}
+body h1 {
+  text-transform: capitalize;
+  color: #c59d5f;
+  margin-bottom: 30px;
+}
+body .main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body .main .question {
+  width: 90vw;
+  max-width: 620px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 1px 1px 0.9rem rgba(0, 0, 0, 0.3);
+}
+body .main .question .holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+body .main .question .holder .question-holder {
+  color: #c59d5f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+}
+body .main .question .holder .top {
+  height: 50px;
+  display: grid;
+  width: 90%;
+  grid-template-columns: 90% 10%;
+}
+body .main .question .holder .top .icon-holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #c59d5f;
+}
+body .main .question .holder .top .icon-holder .expand-icon:hover {
+  animation: rotate 0.2s linear both;
+}
+body .main .question .holder .top .icon-holder .expand-icon:not(:hover) {
+  animation: untiRotate 0.2s linear both;
+}
+body .main .question .holder .top .icon-holder .minimize-icon {
+  display: none;
+}
+body .main .question .holder .top .icon-holder .minimize-icon:hover {
+  animation: rotate 0.2s linear both;
+}
+body .main .question .holder .top .icon-holder .minimize-icon:not(:hover) {
+  animation: untiRotate 0.2s linear both;
+}
+body .main .question .holder .bottom {
+  width: 90%;
+  display: none;
+}
+body .main .question .holder .bottom .divider {
+  height: 2px;
+  background: grey;
+}
+body .main .question .holder .bottom p {
+  margin: 10px 0;
+  width: 100%;
+  color: grey;
+  font-size: 1.05rem;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+@keyframes untiRotate {
+  0% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/*# sourceMappingURL=myStyle.css.map */
