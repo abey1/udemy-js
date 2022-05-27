@@ -7,14 +7,53 @@
     <!-- font-awesome -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
 
     <!-- styles -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="myStyle.css" />
   </head>
   <body>
-    <h1>sidebar project</h1>
+    <div class="main">
+      <i id="menu-icon" class="fa-solid fa-bars"></i>
+    </div>
+    <div id="sidebar" class="sidebar">
+      <div class="top-sidebar">
+        <div class="top-sidebar-content">
+          <h2>coding <span>addict</span></h2>
+          <i id="cross" class="fa-solid fa-xmark"></i>
+        </div>
+      </div>
+      <div class="middle-sidebar">
+        <div class="middle-sidebar-content">
+          <ul>
+            <li class="list-item">
+              <h3>home</h3>
+            </li>
+            <li class="list-item">
+              <h3>about</h3>
+            </li>
+            <li class="list-item">
+              <h3>projects</h3>
+            </li>
+            <li class="list-item">
+              <h3>contact</h3>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom-sidebar">
+        <div class="bottom-sidebar-content">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-behance-square"></i>
+          <i class="fa-brands fa-linkedin"></i>
+          <i class="fa-solid fa-gem"></i>
+        </div>
+      </div>
+    </div>
+    <div style="height: 100vh; background: red" class="first"></div>
+    <div style="height: 100vh; background: blue" class="first"></div>
     <!-- javascript -->
     <script src="app.js"></script>
   </body>
