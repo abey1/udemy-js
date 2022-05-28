@@ -71,4 +71,54 @@ const menu = [
     img: "./images/item-9.jpeg",
     desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
   },
+  {
+    id: 9,
+    title: "quarantine buddy",
+    category: "dinner",
+    price: 6.99,
+    img: "./images/item-9.jpeg",
+    desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
+  },
 ];
+
+const btns = document.getElementsByClassName("btn");
+const itemsHolder = document.getElementById("items-holder");
+[...btns].forEach((btn) => {
+  btn.addEventListener("mousedown", () => {
+    btn.style.boxShadow = "1px 1px 0.1rem black inset";
+    console.log(btn.innerText.toLowerCase());
+    let output = [];
+    btn.innerText.toLowerCase() != "all"
+      ? (output = menu.filter((menuItem) => {
+          return menuItem.category == btn.innerText.toLowerCase();
+        }))
+      : (output = menu);
+
+    let itemsHolderInnerHtml = "";
+    output.forEach((result) => {
+      itemsHolderInnerHtml += `<div class="item">
+          <img
+            style="
+              background: url(${result.img}) center/cover no-repeat;
+            "
+            class="img"
+            alt=""
+          />
+          <div class="bottom-item">
+            <div class="item-title">
+              <h4>${result.title}</h4>
+              <div class="price">${result.price}</div>
+            </div>
+            <div class="divider"></div>
+            <p>
+              ${result.desc}
+            </p>
+          </div>
+        </div>`;
+    });
+    itemsHolder.innerHTML = itemsHolderInnerHtml;
+  });
+  btn.addEventListener("mouseup", () => {
+    btn.style.boxShadow = "1px 1px 0.1rem black";
+  });
+});
