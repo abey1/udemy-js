@@ -72,19 +72,45 @@ const menu = [
     desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
   },
   {
-    id: 9,
-    title: "quarantine buddy",
+    id: 10,
+    title: "Bison Steak",
     category: "dinner",
-    price: 6.99,
-    img: "./images/item-9.jpeg",
+    price: 22.99,
+    img: "./images/item-10.jpeg",
     desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
   },
 ];
 
 const btns = document.getElementsByClassName("btn");
 const itemsHolder = document.getElementById("items-holder");
+let itemsHolderInnerHtml = "";
+menu.forEach((result) => {
+  itemsHolderInnerHtml += `<div class="item">
+          <img
+            style="
+              background: url(${result.img}) center/cover no-repeat;
+            "
+            class="img"
+            alt=""
+          />
+          <div class="bottom-item">
+            <div class="item-title">
+              <h4>${result.title}</h4>
+              <div class="price">$${result.price}</div>
+            </div>
+            <div class="divider"></div>
+            <p>
+              ${result.desc}
+            </p>
+          </div>
+        </div>`;
+});
+
+itemsHolder.innerHTML = itemsHolderInnerHtml;
 [...btns].forEach((btn) => {
   btn.addEventListener("mousedown", () => {
+    itemsHolder.innerHTML = "";
+    itemsHolderInnerHtml = "";
     btn.style.boxShadow = "1px 1px 0.1rem black inset";
     console.log(btn.innerText.toLowerCase());
     let output = [];
@@ -94,7 +120,6 @@ const itemsHolder = document.getElementById("items-holder");
         }))
       : (output = menu);
 
-    let itemsHolderInnerHtml = "";
     output.forEach((result) => {
       itemsHolderInnerHtml += `<div class="item">
           <img
@@ -107,7 +132,7 @@ const itemsHolder = document.getElementById("items-holder");
           <div class="bottom-item">
             <div class="item-title">
               <h4>${result.title}</h4>
-              <div class="price">${result.price}</div>
+              <div class="price">$${result.price}</div>
             </div>
             <div class="divider"></div>
             <p>
