@@ -7,13 +7,38 @@
     <!-- font-awesome -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
     <!-- styles -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="myStyle.css" />
   </head>
   <body>
-    <h1>scroll project</h1>
+    <div class="hero">
+      <div id="nav" class="nav">
+        <div class="nav-center">
+          <div class="logo">
+            <i id="logo" class="fa-brands fa-wordpress"></i>
+          </div>
+          <div class="menu">
+            <i id="menu-icon" class="fa-solid fa-bars"></i>
+            <div class="menu-items-container">
+              <h3 class="menu-items">home</h3>
+              <h3 class="menu-items">about</h3>
+              <h3 class="menu-items">services</h3>
+              <h3 class="menu-items">tours</h3>
+            </div>
+          </div>
+          <div id="collapsable-menu" class="collapsable-menu">
+            <div id="top" class="lower-menu-items"><h4>home</h4></div>
+            <div class="lower-menu-items"><h4>about</h4></div>
+            <div class="lower-menu-items"><h4>services</h4></div>
+            <div id="bottom" class="lower-menu-items"><h4>tours</h4></div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="about-us"></div>
     <!-- javascript -->
     <script src="app.js"></script>
   </body>

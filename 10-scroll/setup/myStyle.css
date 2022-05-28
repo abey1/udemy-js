@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  position: relative;
+}
+body .hero {
+  height: 100vh;
+  width: 100vw;
+  background: url("./hero-bcg.jpeg") center/cover no-repeat;
+}
+body .hero .nav {
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .hero .nav .nav-center {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+body .hero .nav .nav-center .logo i {
+  font-size: 3rem;
+}
+@media screen and (min-width: 800px) {
+  body .hero .nav .nav-center .logo i {
+    color: white;
+  }
+}
+body .hero .nav .nav-center .menu i {
+  font-size: 2rem;
+}
+body .hero .nav .nav-center .menu .menu-items-container {
+  display: flex;
+  width: 33.3333333333vw;
+  justify-content: space-between;
+}
+body .hero .nav .nav-center .menu .menu-items-container h3 {
+  color: white;
+  text-transform: capitalize;
+}
+@media screen and (max-width: 800px) {
+  body .hero .nav .nav-center .menu .menu-items-container {
+    display: none;
+  }
+}
+@media screen and (min-width: 800px) {
+  body .hero .nav .nav-center .menu i {
+    display: none;
+  }
+}
+@media screen and (max-width: 800px) {
+  body .hero .nav .nav-center .menu i {
+    display: block;
+  }
+}
+body .hero .nav .collapsable-menu {
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  top: 54px;
+  left: 0;
+  background: white;
+  border-radius: 0 0 20px 20px;
+  overflow: hidden;
+  animation: collapse 0s linear both;
+}
+body .hero .nav .collapsable-menu .lower-menu-items {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  transition: 0.5s;
+}
+body .hero .nav .collapsable-menu .lower-menu-items h4 {
+  margin-left: 20px;
+  transition: 0.5s;
+}
+body .hero .nav .collapsable-menu .lower-menu-items:hover {
+  background: rgba(0, 128, 0, 0.6);
+}
+body .hero .nav .collapsable-menu .lower-menu-items:hover h4 {
+  color: white;
+  margin-left: 25px;
+}
+@media screen and (min-width: 800px) {
+  body .hero .nav .collapsable-menu {
+    display: none;
+  }
+}
+@media screen and (max-width: 800px) {
+  body .hero .nav .collapsable-menu {
+    display: block;
+  }
+}
+@media screen and (max-width: 800px) {
+  body .hero .nav {
+    background: white;
+  }
+}
+body .hero .hero-overlay {
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 128, 0, 0.4);
+}
+body .about-us {
+  width: 100vw;
+  height: 100vh;
+  background: lightblue;
+}
+
+@keyframes collapse {
+  0% {
+    height: 200px;
+  }
+  100% {
+    height: 0;
+  }
+}
+@keyframes expand {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 200px;
+  }
+}
+
+/*# sourceMappingURL=myStyle.css.map */
