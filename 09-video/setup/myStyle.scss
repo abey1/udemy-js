@@ -5,136 +5,145 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-
 body {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  video {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    overflow: hidden;
-  }
-  .controler {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    z-index: 2;
-    bottom: 10px;
-    height: 50px;
+  .main {
+    position: relative;
+    height: 100vh;
     width: 100vw;
-    // background: red;
-    .buttons-holder {
-      width: 88vw;
-      display: flex;
-      justify-content: space-between;
+    border-bottom: 5px brown solid;
+
+    video {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      overflow: hidden;
+    }
+    .controler {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      margin-bottom: 10px;
-      .left-controllers-holder {
+      position: absolute;
+      z-index: 2;
+      bottom: 10px;
+      height: 50px;
+      width: 100vw;
+      // background: red;
+      .buttons-holder {
+        width: 88vw;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 100px;
+        margin-bottom: 10px;
+        .left-controllers-holder {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100px;
 
-        i {
-          color: white;
-          font-size: 1rem;
+          i {
+            color: white;
+            font-size: 1rem;
+          }
+          h4 {
+            color: white;
+            font-weight: lighter;
+          }
         }
-        h4 {
-          color: white;
-          font-weight: lighter;
+
+        .right-controllers-holder {
+          display: flex;
+          justify-content: space-between;
+          width: 150px;
+          i {
+            color: white;
+            font-size: 1rem;
+          }
         }
       }
-
-      .right-controllers-holder {
-        display: flex;
-        justify-content: space-between;
-        width: 150px;
-        i {
-          color: white;
-          font-size: 1rem;
-        }
+      .tracker {
+        width: 90vw;
+        height: 5px;
+        background: white;
+        border-radius: 5px;
       }
     }
-    .tracker {
-      width: 90vw;
-      height: 5px;
-      background: white;
-      border-radius: 5px;
-    }
-  }
-  .overlay {
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    background: rgba($color: #000000, $alpha: 0.6);
-  }
-  .text-displayer {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 3;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    h1 {
-      color: white;
-      font-size: 5rem;
-      text-transform: capitalize;
-    }
-  }
-  .play-pause-outer {
-    position: absolute;
-    width: 150px;
-    height: 40px;
-    bottom: 100px;
-    left: 100px;
-    background: white;
-    border-radius: 10px;
-    z-index: 4;
-    .play-pause-inner {
-      position: relative;
+    .overlay {
+      display: none;
+      position: absolute;
+      z-index: 1;
       width: 100%;
       height: 100%;
-      border-radius: 10px;
-      display: flex;
-      justify-content: space-between;
+      background: rgba($color: #000000, $alpha: 0.6);
+    }
+    .text-displayer {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 3;
+      display: none;
       align-items: center;
-
-      h5 {
-        font-weight: lighter;
+      justify-content: center;
+      h1 {
+        color: white;
+        font-size: 5rem;
         text-transform: capitalize;
-        font-size: 1.2rem;
-        color: rgb(0, 191, 255);
       }
-
-      .play {
-        margin-left: 10px;
-      }
-      .pause {
-        margin-right: 10px;
-      }
-      .play-pause-overlay {
-        position: absolute;
-        z-index: 6;
-        top: 0;
-        left: 0;
-        width: calc(100% / 2);
+    }
+    .play-pause-outer {
+      position: absolute;
+      width: 150px;
+      height: 40px;
+      bottom: 100px;
+      left: 100px;
+      background: white;
+      border-radius: 10px;
+      z-index: 4;
+      .play-pause-inner {
+        position: relative;
+        width: 100%;
         height: 100%;
-        background: rgb(0, 191, 255);
         border-radius: 10px;
-        animation: play 0.2s linear both;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h5 {
+          font-weight: lighter;
+          text-transform: capitalize;
+          font-size: 1.2rem;
+          color: rgb(0, 191, 255);
+        }
+
+        .play {
+          margin-left: 10px;
+        }
+        .pause {
+          margin-right: 10px;
+        }
+        .play-pause-overlay {
+          position: absolute;
+          z-index: 6;
+          top: 0;
+          left: 0;
+          width: calc(100% / 2);
+          height: 100%;
+          background: rgb(0, 191, 255);
+          border-radius: 10px;
+          animation: play 0.2s linear both;
+        }
+      }
+      &:hover {
+        cursor: pointer;
       }
     }
-    &:hover {
-      cursor: pointer;
-    }
+  }
+  .addition {
+    height: 100vh;
+    width: 50vw;
+    background: rgba(red, 0.2);
   }
 }
 

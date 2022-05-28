@@ -13,35 +13,38 @@
     <link rel="stylesheet" href="myStyle.css" />
   </head>
   <body>
-    <video autoplay muted loop id="myVideo">
-      <source src="./video.mp4" type="video/mp4" />
-    </video>
-    <div id="controler" class="controler">
-      <div class="buttons-holder">
-        <div class="left-controllers-holder">
-          <i class="fa-solid fa-play"></i>
-          <h4>0:12 / 0:25</h4>
-        </div>
+    <div class="main">
+      <video autoplay muted loop id="myVideo">
+        <source src="./video.mp4" type="video/mp4" />
+      </video>
+      <div id="controler" class="controler">
+        <div class="buttons-holder">
+          <div class="left-controllers-holder">
+            <i class="fa-solid fa-play"></i>
+            <h4>0:12 / 0:25</h4>
+          </div>
 
-        <div class="right-controllers-holder">
-          <i class="fa-solid fa-volume-xmark"></i>
-          <i class="fa-solid fa-expand"></i>
-          <i class="fa-solid fa-ellipsis-vertical"></i>
+          <div class="right-controllers-holder">
+            <i class="fa-solid fa-volume-xmark"></i>
+            <i class="fa-solid fa-expand"></i>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </div>
+        </div>
+        <div class="tracker"></div>
+      </div>
+      <div id="overlay" class="overlay"></div>
+      <div id="text-displayer" class="text-displayer">
+        <h1>video project</h1>
+      </div>
+      <div id="play-pause-outer" class="play-pause-outer">
+        <div class="play-pause-inner">
+          <h5 class="play">play</h5>
+          <h5 class="pause">pause</h5>
+          <div id="play-pause-overlay" class="play-pause-overlay"></div>
         </div>
       </div>
-      <div class="tracker"></div>
     </div>
-    <div id="overlay" class="overlay"></div>
-    <div id="text-displayer" class="text-displayer">
-      <h1>video project</h1>
-    </div>
-    <div id="play-pause-outer" class="play-pause-outer">
-      <div class="play-pause-inner">
-        <h5 class="play">play</h5>
-        <h5 class="pause">pause</h5>
-        <div id="play-pause-overlay" class="play-pause-overlay"></div>
-      </div>
-    </div>
+    <div class="addition"></div>
     <!-- javascript -->
     <script src="app.js"></script>
   </body>
