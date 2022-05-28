@@ -1,3 +1,22 @@
-// MDN
-// The DOMContentLoaded event fires when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading.
-// The load event is fired when the whole page has loaded, including all dependent resources such as stylesheets and images.
+let playStatus = true;
+const playPauseButton = document.getElementById("play-pause-outer");
+const playPauseOverlay = document.getElementById("play-pause-overlay");
+const myVideo = document.getElementById("myVideo");
+const controler = document.getElementById("controler");
+const textDisplayer = document.getElementById("text-displayer");
+
+playPauseButton.addEventListener("click", () => {
+  if (playStatus) {
+    playPauseOverlay.style.animation = "pause 0.2s linear both";
+    myVideo.pause();
+    controler.style.display = "flex";
+    textDisplayer.style.display = "flex";
+    playStatus = false;
+  } else {
+    playPauseOverlay.style.animation = "play 0.2s linear both";
+    myVideo.play();
+    controler.style.display = "none";
+    textDisplayer.style.display = "none";
+    playStatus = true;
+  }
+});

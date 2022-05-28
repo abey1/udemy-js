@@ -4,12 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Video</title>
-
+    <!-- fontawsome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
     <!-- styles -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="myStyle.css" />
   </head>
   <body>
-    <h1>video project</h1>
+    <video autoplay muted loop id="myVideo">
+      <source src="./video.mp4" type="video/mp4" />
+    </video>
+    <div id="controler" class="controler">
+      <div class="buttons-holder">
+        <div class="left-controllers-holder">
+          <i class="fa-solid fa-play"></i>
+          <h4>0:12 / 0:25</h4>
+        </div>
+
+        <div class="right-controllers-holder">
+          <i class="fa-solid fa-volume-xmark"></i>
+          <i class="fa-solid fa-expand"></i>
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
+      </div>
+      <div class="tracker"></div>
+    </div>
+    <div id="overlay" class="overlay"></div>
+    <div id="text-displayer" class="text-displayer">
+      <h1>video project</h1>
+    </div>
+    <div id="play-pause-outer" class="play-pause-outer">
+      <div class="play-pause-inner">
+        <h5 class="play">play</h5>
+        <h5 class="pause">pause</h5>
+        <div id="play-pause-overlay" class="play-pause-overlay"></div>
+      </div>
+    </div>
     <!-- javascript -->
     <script src="app.js"></script>
   </body>
