@@ -5,6 +5,20 @@ const logo = document.getElementById("logo");
 const menuItems = document.getElementsByClassName("menu-items");
 const menuIcon = document.getElementById("menu-icon");
 const collapseableMenu = document.getElementById("collapsable-menu");
+const heroButton = document.getElementById("hero-button");
+const toTop = document.getElementById("to-top");
+
+toTop.addEventListener("click", () => {
+  document.getElementById("hero").scrollIntoView({
+    behavior: "smooth",
+  });
+});
+
+heroButton.addEventListener("click", () => {
+  document.getElementById("our-services").scrollIntoView({
+    behavior: "smooth",
+  });
+});
 document.addEventListener("scroll", () => {
   if (window.scrollY > 50) {
     nav.style.background = "white";
@@ -21,7 +35,30 @@ document.addEventListener("scroll", () => {
     });
     menuIcon.style.color = "white";
   }
-  console.log(window.scrollY);
+
+  if (window.scrollY > 600) {
+    toTop.style.display = "flex";
+  } else {
+    toTop.style.display = "none";
+  }
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth < 800) {
+    nav.style.background = "white";
+    logo.style.color = "black";
+    [...menuItems].forEach((e) => {
+      e.style.color = "black";
+    });
+    menuIcon.style.color = "black";
+  } else {
+    nav.style.background = "transparent";
+    logo.style.color = "white";
+    [...menuItems].forEach((e) => {
+      e.style.color = "white";
+    });
+    menuIcon.style.color = "white";
+  }
 });
 
 menuIcon.addEventListener("click", () => {
