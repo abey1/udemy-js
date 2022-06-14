@@ -11,3 +11,27 @@ I just told you! You've killed me! Fry! Quit doing the right thing, you jerk! Mi
   `Man braid celiac synth freegan readymade, pitchfork fam salvia waistcoat lomo bitters gentrify four loko. Pitchfork semiotics post-ironic vegan. Tofu meditation microdosing hashtag semiotics venmo. Flexitarian vape tilde taiyaki. Prism poutine farm-to-table, messenger bag vegan taxidermy tattooed sartorial squid jean shorts fixie selvage trust fund vape.`,
   `Rutters Plate Fleet boom chandler Brethren of the Coast handsomely lookout marooned brigantine knave. Buccaneer gangway jack rum loot spyglass line Jack Tar fore gaff. Gaff topmast scuttle ballast swab draught measured fer yer chains dance the hempen jig Chain Shot yardarm.`,
 ];
+
+const btn = document.getElementById("btn");
+const paragraphContainer = document.getElementById("paragraph-container");
+const pinput = document.getElementById("paragraphs");
+
+btn.addEventListener("mousedown", () => {
+  btn.style.boxShadow = "1px 1px 0.3rem black inset";
+});
+btn.addEventListener("mouseup", () => {
+  btn.style.boxShadow = "1px 1px 0.3rem black";
+  let paragraphs = parseInt(pinput.value);
+  let ptext = "";
+
+  if (paragraphs < 0 || paragraphs > 9) {
+    ptext += `<p>` + text[Math.floor(Math.random() * 9)] + `</p>`;
+  } else {
+    for (let i = 0; i < paragraphs; i++) {
+      ptext += `<p>` + text[Math.floor(Math.random() * 9)] + `</p>`;
+    }
+  }
+
+  console.log(ptext);
+  paragraphContainer.innerHTML = ptext;
+});
