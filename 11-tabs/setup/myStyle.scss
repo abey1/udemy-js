@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  //   height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1f5f8;
+  .upper-part {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    text-align: center;
+    margin-top: 90px;
+    margin-bottom: 60px;
+    h1 {
+      font-size: 2.5rem;
+      text-transform: capitalize;
+    }
+    p {
+      color: grey;
+    }
+  }
+  .outer-lower-part {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95vw;
+    .lower-part {
+      width: 100%;
+      max-width: 1200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      //   background: red;
+      .picture-holder {
+        width: 95%;
+        height: 100%;
+        margin-bottom: 45px;
+        .img {
+          width: 100%;
+          height: 300px;
+          background: url("./hero-bcg.jpeg") center/cover no-repeat;
+          border-radius: 10px;
+        }
+      }
+      @media screen and (min-width: 992px) {
+        .picture-holder {
+          width: 100%;
+        }
+      }
+      .tab-holder {
+        width: 95%;
+        height: 100%;
+        // border: 1px black solid;
+        margin-bottom: 45px;
+        background: white;
+        .upper-tab {
+          display: flex;
+          //   border: 1px black solid;
+          border-radius: 20px 20px 0 0;
+          overflow: hidden;
+          background: #f1f5f8;
+          .tab {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: calc(100% / 3);
+            height: 50px;
+            text-align: center;
+            text-transform: capitalize;
+            font-size: 1.5rem;
+            color: rgb(112, 112, 241);
+            background: #c2d6f4;
+            transition: 0.5s;
+            &:hover {
+              cursor: pointer;
+              color: grey;
+              background: #dae2ec;
+            }
+          }
+        }
+        .lower-tab {
+          position: relative;
+          height: 280px;
+          .tab-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 10px 20px;
+            .title {
+              text-transform: capitalize;
+              font-weight: bold;
+              font-size: 1.1rem;
+              margin: 20px 0;
+            }
+          }
+        }
+      }
+      @media screen and (min-width: 992px) {
+        .tab-holder {
+          width: 100%;
+        }
+      }
+    }
+    @media screen and (min-width: 992px) {
+      .lower-part {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        gap: 20px;
+      }
+    }
+  }
+}

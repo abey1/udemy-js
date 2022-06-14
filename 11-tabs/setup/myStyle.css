@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1f5f8;
+}
+body .upper-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  text-align: center;
+  margin-top: 90px;
+  margin-bottom: 60px;
+}
+body .upper-part h1 {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+}
+body .upper-part p {
+  color: grey;
+}
+body .outer-lower-part {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95vw;
+}
+body .outer-lower-part .lower-part {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body .outer-lower-part .lower-part .picture-holder {
+  width: 95%;
+  height: 100%;
+  margin-bottom: 45px;
+}
+body .outer-lower-part .lower-part .picture-holder .img {
+  width: 100%;
+  height: 300px;
+  background: url("./hero-bcg.jpeg") center/cover no-repeat;
+  border-radius: 10px;
+}
+@media screen and (min-width: 992px) {
+  body .outer-lower-part .lower-part .picture-holder {
+    width: 100%;
+  }
+}
+body .outer-lower-part .lower-part .tab-holder {
+  width: 95%;
+  height: 100%;
+  margin-bottom: 45px;
+  background: white;
+}
+body .outer-lower-part .lower-part .tab-holder .upper-tab {
+  display: flex;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+  background: #f1f5f8;
+}
+body .outer-lower-part .lower-part .tab-holder .upper-tab .tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33.3333333333%;
+  height: 50px;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  color: rgb(112, 112, 241);
+  background: #c2d6f4;
+  transition: 0.5s;
+}
+body .outer-lower-part .lower-part .tab-holder .upper-tab .tab:hover {
+  cursor: pointer;
+  color: grey;
+  background: #dae2ec;
+}
+body .outer-lower-part .lower-part .tab-holder .lower-tab {
+  position: relative;
+  height: 280px;
+}
+body .outer-lower-part .lower-part .tab-holder .lower-tab .tab-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 10px 20px;
+}
+body .outer-lower-part .lower-part .tab-holder .lower-tab .tab-content .title {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 20px 0;
+}
+@media screen and (min-width: 992px) {
+  body .outer-lower-part .lower-part .tab-holder {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 992px) {
+  body .outer-lower-part .lower-part {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 20px;
+  }
+}
+
+/*# sourceMappingURL=myStyle.css.map */
