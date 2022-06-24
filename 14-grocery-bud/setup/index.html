@@ -7,13 +7,74 @@
     <!-- font-awesome -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
     <!-- styles -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="myStyle.css" />
   </head>
   <body>
-    <h1>grocery bud project</h1>
+    <div class="card">
+      <div class="card-container">
+        <div class="notification">
+          <div class="notification-remove">
+            <p id="notification-text">notification</p>
+          </div>
+        </div>
+        <div class="title">
+          <h2>grocery bud</h2>
+        </div>
+        <div class="controler-holder">
+          <div id="controler-add" class="controler">
+            <input type="text" placeholder="e.g eggs" />
+            <button>submit</button>
+          </div>
+          <div id="controler-edit" class="controler">
+            <input type="text" />
+            <button>edit</button>
+          </div>
+        </div>
+        <div class="items">
+          <div class="single-item">
+            <h4 class="item-name">name</h4>
+            <div class="controler-buttons">
+              <div class="edit"><i class="fa-solid fa-pen-to-square"></i></div>
+              <div class="delete"><i class="fa-solid fa-trash-can"></i></div>
+            </div>
+          </div>
+          <div class="single-item">
+            <h4 class="item-name">name2</h4>
+            <div class="controler-buttons">
+              <div class="edit"><i class="fa-solid fa-pen-to-square"></i></div>
+              <div class="delete"><i class="fa-solid fa-trash-can"></i></div>
+            </div>
+          </div>
+          <div class="single-item">
+            <h4 class="item-name">name3</h4>
+            <div class="controler-buttons">
+              <div class="edit"><i class="fa-solid fa-pen-to-square"></i></div>
+              <div class="delete"><i class="fa-solid fa-trash-can"></i></div>
+            </div>
+          </div>
+          <div class="single-item">
+            <h4 class="item-name">name4</h4>
+            <div class="controler-buttons">
+              <div class="edit"><i class="fa-solid fa-pen-to-square"></i></div>
+              <div class="delete"><i class="fa-solid fa-trash-can"></i></div>
+            </div>
+          </div>
+          <div class="single-item">
+            <h4 class="item-name">name5</h4>
+            <div class="controler-buttons">
+              <div class="edit"><i class="fa-solid fa-pen-to-square"></i></div>
+              <div class="delete"><i class="fa-solid fa-trash-can"></i></div>
+            </div>
+          </div>
+        </div>
+        <div class="clear-button">
+          <h4>clear items</h4>
+        </div>
+      </div>
+    </div>
     <!-- javascript -->
     <script src="app.js"></script>
   </body>
